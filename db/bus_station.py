@@ -8,13 +8,10 @@ from bus_station_map import add_bus_stops, add_buses, add_stations
 
 def save_bus_stops():
     # Load the route_map from file
-    with open("../route.json", "r") as f:
+    with open("datas/route.json", "r") as f:
         route_map = json.load(f)
 
-    # with open("../station.json", "r") as f:
-    #     station_map = json.load(f)
-
-    with open("../red_bus.json", "r") as f:
+    with open("datas/red_bus.json", "r") as f:
         red_bus_map = json.load(f)
 
     red_buses = []

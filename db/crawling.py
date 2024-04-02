@@ -31,13 +31,13 @@ Session = sessionmaker(bind=engine)
 
 
 def store_bus_data():
-    with open("../route.json", "r") as f:
+    with open("../datas/route.json", "r") as f:
         route_map = json.load(f)
 
-    with open("../station.json", "r") as f:
+    with open("../datas/station.json", "r") as f:
         station_map = json.load(f)
 
-    with open("../red_bus.json", "r") as f:
+    with open("../datas/red_bus.json", "r") as f:
         red_bus_list = json.load(f)
 
     result = [
