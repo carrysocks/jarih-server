@@ -14,7 +14,7 @@ def get_application() -> FastAPI:
 
     set_cors(application)
 
-    init_db("postgresql://myuser:mypassword@localhost/mydb")
+    init_db(settings.DB_URL)
 
     return application
 

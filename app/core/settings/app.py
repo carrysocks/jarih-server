@@ -16,7 +16,7 @@ class AppSettings(BaseSettings):
     TITLE: str = "GBUS"
     VERSION: str = "0.0.1"
     DESCRIPTION: str = "GBUS API Open API Docs"
-    WRITE_DB_URL: str = os.environ["DB_URL"]
+    DB_URL: str = os.environ["DB_URL"]
     SECRET_KEY: str = os.environ["SECRET_KEY"]
     ALGORITHM: str = os.environ["ALGORITHM"]
     LAMBDA_ENDPOINT: str = os.environ["LAMBDA_ENDPOINT"]

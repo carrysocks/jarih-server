@@ -2,16 +2,20 @@ import json
 import xml.etree.ElementTree as ET
 import requests
 import xmljson as xmljson
+import os
 
 from bus_station_map import add_bus_stops, add_buses, add_stations
 
+project_home = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+route_file_path = os.path.join(project_home, 'datas', 'route.json')
+red_bus_file_path = os.path.join(project_home, 'datas', 'red_bus.json')
 
 def save_bus_stops():
     # Load the route_map from file
-    with open("datas/route.json", "r") as f:
+    with open(route_file_path, "r") as f:
         route_map = json.load(f)
 
-    with open("datas/red_bus.json", "r") as f:
+    with open(red_bus_file_path, "r") as f:
         red_bus_map = json.load(f)
 
     red_buses = []

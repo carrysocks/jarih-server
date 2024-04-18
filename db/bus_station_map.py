@@ -1,13 +1,14 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 import psycopg2
+import os
 
 from app.db.models.bus import TblBus
 from app.db.models.bus_stop import TblBusStop
 from app.db.models.station import TblStation
 
 # Define the database connection and create the engine
-db_url = "postgresql://myuser:mypassword@localhost/mydb"
+db_url = os.environ["DB_URL"]
 engine = create_engine(db_url)
 
 # Define the ORM Base object
